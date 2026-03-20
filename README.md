@@ -68,6 +68,7 @@ const API_KEY = "your_api_key_here";
 ## 📷 Screenshot
 
 (Add your project screenshot here)
+<img width="1320" height="1292" alt="image" src="https://github.com/user-attachments/assets/b9cd43e7-e438-4071-99dc-a85da0e97441" />
 
 ---
 
