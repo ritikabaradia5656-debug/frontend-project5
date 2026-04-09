@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,39 +5,30 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Background */
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
-/* App container */
 .app {
   width: 100%;
   max-width: 420px;
   padding: 25px;
   border-radius: 20px;
-
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.2);
-
   box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-
   text-align: center;
   color: #fff;
 }
 
-/* Title */
 h1 {
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
-/* Search box */
 .search-box {
   display: flex;
   gap: 10px;
@@ -49,64 +39,102 @@ h1 {
   padding: 12px;
   border-radius: 10px;
   border: none;
-  outline: none;
 }
 
 .search-box button {
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 10px;
   border: none;
-  background: #ffffff;
-  color: #333;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.search-box button:hover {
-  background: #ddd;
-}
-
-/* Weather box */
 #weatherBox {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
-/* Weather card */
 .weather-card {
   padding: 20px;
   border-radius: 15px;
-
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.25);
 }
 
-/* Icon */
-.weather-card img {
-  width: 90px;
-}
-
-/* Temp */
 .temp {
   font-size: 36px;
   font-weight: bold;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.desc {
   margin: 10px 0;
 }
 
-/* Description */
-.desc {
-  margin-bottom: 10px;
-  text-transform: capitalize;
+/* Forecast */
+.forecast {
+  margin-top: 20px;
+  text-align: left;
 }
 
-/* Extra info */
-.weather-card p {
-  margin: 5px 0;
+.forecast-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.forecast-item {
+  min-width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+}
+
+.day {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.temp-small {
+  font-weight: bold;
+}
+
+.label-small {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.desc-small {
+  font-size: 12px;
 }
 
 /* Error */
 .error {
   color: #ffdddd;
-  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app {
+    width: 90%;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .temp {
+    font-size: 28px;
+  }
 }
